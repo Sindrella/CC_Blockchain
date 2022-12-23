@@ -59,8 +59,6 @@ contract BasicLoan {
                 lender,
                 terms.loanDaiAmount + terms.feeDaiAmount
             );
-
-            DAI.transferFrom(lender, address(this), terms.loanDaiAmount);
             
             selfdestruct(borrower);
         }
